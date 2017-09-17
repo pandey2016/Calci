@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         operationList.add(makeString(numberCache))
         numberCache.clear()
 
-        val calculator = StringCalculator()
+        val calculator = Compute()
         val answer = calculator.calculate(operationList)
 
         updateDisplay("=" + answer.toString())
