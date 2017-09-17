@@ -3,7 +3,7 @@ package com.example.firstapp.calci
 /**
  * Created by ABHISHEK on 14-Sep-17.
  */
-class StringCalculator {
+class Compute {
 
     fun calculate(calculationList: List<String>): Int {
         var currentOp: String = ""
@@ -11,10 +11,7 @@ class StringCalculator {
 
         calculationList.forEach { token ->
             when {
-                token.equals("+")
-                        || token.equals("/")
-                        || token.equals("*")
-                        || token.equals("-") -> currentOp = token
+                token.equals("+") || token.equals("/")  || token.equals("*")  || token.equals("-") -> currentOp = token
 
                 currentOp.equals("-") -> currentNumber -= token.toInt()
                 currentOp.equals("/") -> currentNumber /= token.toInt()
